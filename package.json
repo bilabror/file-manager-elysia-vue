@@ -1,0 +1,23 @@
+{
+  "name": "file-manager-elysia-vue3",
+  "version": "1.0.0",
+  "description": "File Manager using elysia and vue3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:backend": "cd apps/backend && bun run dev",
+    "dev:frontend": "cd apps/frontend && bun run dev",
+    "docker:up": "docker compose up -d postgres",
+    "docker:down": "docker compose down",
+    "docker:reset": "docker compose down -v && docker compose up -d postgres",
+    "docker:logs": "docker compose logs -f postgres"
+  },
+  "author": "Bil Abror",
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  },
+  "packageManager": "bun@1.2.18"
+}

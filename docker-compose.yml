@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: filemanager_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: filemanager
+      POSTGRES_USER: filemanager_user
+      POSTGRES_PASSWORD: filemanager_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./apps/backend/src/database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U filemanager_user -d filemanager"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data: 

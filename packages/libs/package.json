@@ -1,0 +1,13 @@
+{
+  "name": "libs",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@elysiajs/eden": "latest"
+  },
+  "devDependencies": {
+    "backend": "workspace:*",
+    "elysia": "latest"
+  }
+}
