@@ -20,17 +20,12 @@ bun run db:setup
 bun install
 ```
 
-4. Run the development server
+1. Run the development (backend and frontend)
 
 ```bash
-bun run dev:frontend
+bun run dev
 ```
 
-5. Run the backend server
-
-```bash
-bun run dev:backend
-```
 
 ## TODOS
 
