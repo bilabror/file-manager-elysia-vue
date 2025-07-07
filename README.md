@@ -11,19 +11,19 @@ git clone https://github.com/eysia/eysia-file-manager.git
 2. Setup database
 
 ```bash
-bun run db:setup
+bun docker:up
 ```
 
 3. Install dependencies
 
 ```bash
-bun install
+bun i
 ```
 
 1. Run the development (backend and frontend)
 
 ```bash
-bun run dev
+bun dev
 ```
 
 
